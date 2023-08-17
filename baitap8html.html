@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf8">
+
+    <!-- Title tag -->
+    <title>bai tap 8</title>
+
+</head>
+
+<body>
+    <script>
+        //bai 8: Viết function trả ra trung bình cộng của một mảng số
+        // co 2 cach. 
+        //c1: như duwosi
+
+        // const arrayInt = [2, 4, 6, 8, 10];
+        //         function average(arrayInt) {
+
+        //             let sum = 0;
+        //            // let arrayInt = [];
+        //             for (let i = 0; i < arrayInt.length; i++) {
+        //                 if (arrayInt[i] > 0) {
+        //                     sum = sum + arrayInt[i];
+        //                 }
+        //             } let average = sum / arrayInt.length;
+        //             console.log("trung binh cong cua mang la:" +average );
+        //          }
+        //          let ketQua=average(arrayInt);
+
+        //c2; goi 2 function vơi nhau
+        let arrayInt = [];
+        function average(arrayInt) {
+            let sum = 0;
+            for (let i = 0; i < arrayInt.length; i++) {
+                if (arrayInt[i] > 0) {
+                    sum = sum + arrayInt[i];
+                }
+            } let average = sum / arrayInt.length;
+            console.log("trung binh cong cua mang la:" + average);
+        }
+        function arrInput() {
+            let n = Number(prompt("Muon nhap vao bao nhieu chi so trong mang"));
+            for (let i = 0; i < n; i++) {
+                arrayInt.push(Number(prompt("Nhap vao " + n + " so nguyen")));
+            } 
+            console.log("ArrInt: " + "[" + arrayInt + "]");
+        } 
+        arrInput();
+        average(arrayInt);
+
+    </script>
+</body>
+
+</html>

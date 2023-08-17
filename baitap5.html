@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf8">
+
+    <!-- Title tag -->
+    <title>bai tap 5</title>
+
+</head>
+
+<body>
+    <script>
+        //Cho chuỗi dài hơn 15 kỹ tự, viết function cắt chuỗi, lấy ra 10 ký tự đầu tiên
+    //và thêm vào dấu “…” ở cuối chuỗi
+function camelcase(){
+    let str=prompt("Nhap vao mot tu co nghia");
+    console.log("chuoi vua nhap vao: " + str);
+
+    let firstStr = str.slice(0,1).toUpperCase();
+    let allBehindStr=str.slice(1).toLowerCase();
+   
+    console.log("chuoi moi: " + firstStr + allBehindStr);
+    } 
+    camelcase();
+    
+    </script>
+</body>
+
+</html>

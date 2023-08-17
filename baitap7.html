@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf8">
+
+    <!-- Title tag -->
+    <title>bai tap 7</title>
+
+</head>
+
+<body>
+    <script>
+        //bai7:Viết function kiểm tra số chẵn-lẻ, nguyên tố, hoàn hảo
+        // let num = Number(prompt("nhap vao so nguyen"));
+
+        // //kiểm tra số chẵn
+        // function evenNumberCheck(num) {
+        //     if (num % 2 == 0) {
+        //         console.log(num + " la so chan ");
+        //     } else {
+        //         console.log(num + " la so le ");
+        //     }
+        // }
+
+
+        // evenNumberCheck(num);
+
+        // //kiểm tra nguyên tố
+        // function checkIsPrime(num) {
+        //     let isPrime = true;
+        //         if (num >= 2) {
+        //             for (j = 2; j < num; j++) {
+        //                 if (num % j == 0) {
+        //                     isPrime = false;
+        //                     break;
+        //                 }
+        //             }
+        //             if (isPrime) {
+        //                 console.log(num);
+        //             }
+        //         }
+        //      }
+
+        // checkIsPrime(num);
+
+        // //kiểm tra số hoàn hảo
+
+
+        // function find_perfect_num(num) {
+        //     let flag=0;      //flag=1:la so hoan thien
+        //      let total=0;      //flag=0: khong phải la so hoan thien
+        //     for (var i = 1; i < num; i++) { //-Kiểm tra tới number / 2 thôi,vì ước số lớn nhất của 1 số k vượt quá 1 nửa rồi.
+        //         if (num % i == 0) {   ////Tìm tổng ước số   
+        //             total = total + i;// Sum += i; //Nếu là ước số thì cộng vào tổng
+        //         } 
+        //     }
+        //     if ((total == num)&(num != 0)) {// //So sánh tổng ước số với số đã cho để tìm ra số hoàn hảo
+        //         let flag=1;
+        //         return flag;
+        //     }
+        // }
+
+        // let check = find_perfect_num(num);
+        // if (check == 1) console.log(num + " la so hoan hao");
+        // else console.log(num + " khong phai la so hoan hao");
+
+
+        alert("Hãy nhập một chuỗi")
+        let arrNumber = +prompt("Enter array length!!")
+        let arr = [];
+        let soNguyen = [];
+        let soHoanHao = [];
+        for (let i = 0; i < arrNumber; i++) {
+            arr.push(+prompt("Enter value " + (i + 1)))
+        }
+
+
+
+        const soChan = arr.filter((arr) => { return arr % 2 == 0 });
+        alert("Số chẵn là: " + soChan);
+
+
+
+
+        const soLe = arr.filter((arr) => { return arr % 2 != 0 });
+        alert("Số lẻ là " + soLe);
+
+
+
+
+        const soNguyenTo = (arr) => {
+            if (arr[i] >= 2) {
+                for (let i = 0; i < arrNumber; i++) {
+                    let checkPoints = 0;
+                    for
+                        (let j = 2; j < arr[i]; j++) {
+                        if (arr[i] % j != 0) {
+                            checkPoints++;
+                        }
+                        if (checkPoints === (arr[i] - 2)) {
+                            soNguyen.push(arr[i]);
+                        }
+                    }
+                }
+            }
+        }
+        soNguyenTo(arr)
+        alert("Số nguyên là " + soNguyen);
+
+
+
+
+        const perfNumber = (arr) => {
+            for (let i = 0; i < arr[i]; i++) {
+                let tolatNum = 0;
+                for (let j = 1; j < arr[i]; j++) {
+                    if (arr[i] % j == 0) {
+                        tolatNum += j;
+                    }
+                    if (tolatNum == arr
+
+                    [i]) {
+                        soHoanHao.push(arr[i]);
+                        break;
+                    }
+                }
+            }
+        }
+        perfNumber(arr);
+        alert("Số hoàn hảo là " + soHoanHao);
+
+
+    </script>
+</body>
+
+</html>
